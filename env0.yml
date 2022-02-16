@@ -5,3 +5,7 @@ deploy:
     terraformPlan:
       before:
         - ./test.sh
+    terraformApply:
+      after:
+        - echo ${key}
+        - ansible --version
